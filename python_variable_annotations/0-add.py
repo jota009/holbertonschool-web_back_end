@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 0-add.py: Define a function that adds two floats,
 with full type annotations.
