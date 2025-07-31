@@ -8,6 +8,7 @@ and return a list of (element, length) tuples.
 
 from typing import Iterable, Sequence, List, Tuple
 
+
 def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     Given an iterable of sequence-like objects, return a list
