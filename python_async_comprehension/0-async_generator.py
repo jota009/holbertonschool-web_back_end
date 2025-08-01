@@ -8,7 +8,7 @@ waiting 1 second before each yield.
 
 import asyncio
 import random
-from typing import Generator
+from typing import Generator  # note: not AsyncGenerator
 
 
 async def async_generator() -> Generator[float, None, None]:
