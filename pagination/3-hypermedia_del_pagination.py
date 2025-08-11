@@ -6,6 +6,7 @@ Deletion-resilient hypermedia pagination
 import csv
 from typing import List, Dict
 
+
 class Server:
     """Server class to paginate a database of popular baby names."""
     DATA_FILE = "Popular_Baby_Names.csv"
@@ -38,13 +39,14 @@ class Server:
 
         # Guards
         assert isinstance(index, int), "index must be an int"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be an int > 0"
+        assert isinstance(page_size, int
+                          ) and page_size > 0, "page_size must be an int > 0"
         assert 0 <= index < len(self.dataset()), "index out of range"
 
         idx_map = self.indexed_dataset()
         data: List[List] = []
         cursor = index
-        upper_bound = len(self.dataset())  # safe ceiling even if idx_map has holes
+        upper_bound = len(self.dataset())
 
         # Collect up to `page_size` existing rows, skipping deleted indices
         while len(data) < page_size and cursor < upper_bound:
