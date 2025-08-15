@@ -14,9 +14,16 @@ def log_stats() -> None:
     print(f"{total} logs")
 
     print("Methods:")
-    for method in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
-        count = col.count_documents({"method": method})
-        print(f"\tmethod) {method}: {count}")
+    get_cnt = col.count_documents({"method": "GET"})
+    post_cnt = col.count_documents({"method": "POST"})
+    put_cnt = col.count_documents({"method": "PUT"})
+    patch_cnt = col.count_documents({"method": "PATCH"})
+    delete_cnt = col.count_documents({"method": "DELETE"})
+    print(f"\tmethod GET: {get_cnt}")
+    print(f"\tmethod POST: {post_cnt}")
+    print(f"\tmethod PUT: {put_cnt}")
+    print(f"\tmethod PATCH: {patch_cnt}")
+    print(f"\tmethod DELETE: {delete_cnt}")
 
     status_count = col.count_documents({"method": "GET", "path": "/status"})
     print(f"{status_count} status check")
