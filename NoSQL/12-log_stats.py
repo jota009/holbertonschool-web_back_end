@@ -18,7 +18,7 @@ def log_stats() -> None:
         count = col.count_documents({"method": method})
         print(f"\tmethod) {method}: {count}")
 
-    status_count = col.documents({"method": "GET", "path": "/status"})
+    status_count = col.count_documents({"method": "GET", "path": "/status"})
     print(f"{status_count} status check")
 
     client.close()
