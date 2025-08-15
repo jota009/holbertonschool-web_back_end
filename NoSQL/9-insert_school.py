@@ -2,10 +2,6 @@
 """Insert a new document into a MongoDB collection using kwargs."""
 
 
-from bson.objectid import ObjectId
-from pymongo.collection import Collection
-
-
 def insert_school(mongo_collection: Collection, **kwargs) -> ObjectId:
     """Insert a new document and return its ObjectId.
 
