@@ -2,7 +2,7 @@
 """Insert a new document into a MongoDB collection using kwargs."""
 
 
-def insert_school(mongo_collection: Collection, **kwargs) -> ObjectId:
+def insert_school(mongo_collection, **kwargs):
     """Insert a new document and return its ObjectId.
 
     Args:
