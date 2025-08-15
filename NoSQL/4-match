@@ -1,2 +1,2 @@
 // my comment
-db.school.find({ name: "Holberton Scholl" })
+db.school.find({ name: "Holberton School" })
