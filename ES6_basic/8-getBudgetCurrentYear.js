@@ -3,10 +3,10 @@ function getCurrentYear() {
   return date.getFullYear();
 }
 
-export default function getBudgetForCurrentYear(income, gpd, capita) {
+export default function getBudgetForCurrentYear(income, gdp, capita) {
   return {
     [`income-${getCurrentYear()}`]: income,
-    [`gpd-${getCurrentYear()}`]: gpd,
+    [`gdp-${getCurrentYear()}`]: gdp,
     [`capita-${getCurrentYear()}`]: capita,
   };
 }
