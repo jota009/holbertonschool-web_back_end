@@ -1,0 +1,32 @@
+# dependencies
+node_modules/
+.pnpm-store/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+.vercel/
+
+# builds / coverage
+dist/
+build/
+coverage/
+.nyc_output/
+
+# env / secrets
+.env
+.env.*
+*.local
+
+# caches & logs
+.eslintcache
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
