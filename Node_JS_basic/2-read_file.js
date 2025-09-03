@@ -10,7 +10,7 @@ function countStudents(path) {
       .filter((l) => l.length > 0);
 
     if (lines.length === 0) {
-      console.log('Number od students 0');
+      console.log('Number of students: 0');
       return;
     }
 
@@ -33,7 +33,7 @@ function countStudents(path) {
     }
 
     for (const [field, list] of Object.entries(groups)) {
-      console.log(`Number of students if ${field}: ${list.length}. List: ${list.join(', ')}`);
+      console.log(`Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`);
     }
   } catch (e) {
     throw new Error('Cannot load the database');
