@@ -53,7 +53,7 @@ function countStudents(path) {
       // Log each field line exactly as specified
       for (const [field, list] of Object.entries(groups)) {
         console.log(
-          `Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`
+          `Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`,
         );
       }
 
