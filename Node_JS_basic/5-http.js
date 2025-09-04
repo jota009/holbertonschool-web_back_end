@@ -11,7 +11,12 @@ async function buildStudentsReport(dbPath) {
     throw new Error('Cannot load the database');
   }
 
-  const data = await fs.promises.readFile(dbPath, 'utf8');  // async, non-blocking
+  let data;
+  try {
+  data = await fs.promises.readFile(dbPath, 'utf8');
+  } catch {
+    throw new Error('Cannot load the database');
+  }
 
   const lines = data
     .split('\n')
