@@ -1,6 +1,6 @@
 // 5-http.js
-const http = require('http');            // broader compatibility than 'node:http'
-const fs = require('fs');                // we'll use fs.promises.readFile
+const http = require('http'); // broader compatibility than 'node:http'
+const fs = require('fs'); // we'll use fs.promises.readFile
 
 // Read DB path from CLI: node 5-http.js database.csv
 const DB_PATH = process.argv[2];
@@ -13,7 +13,7 @@ async function buildStudentsReport(dbPath) {
 
   let data;
   try {
-  data = await fs.promises.readFile(dbPath, 'utf8');
+    data = await fs.promises.readFile(dbPath, 'utf8');
   } catch (err) {
     throw new Error('Cannot load the database');
   }
@@ -45,14 +45,14 @@ async function buildStudentsReport(dbPath) {
   for (const cols of rows) {
     const field = cols[fIdx];
     const firstName = cols[fNameIdx];
-    if (!groups[field]) groups[field] = [];   // ← replaces `||=`
+    if (!groups[field]) groups[field] = []; // ← replaces `||=`
     groups[field].push(firstName);
   }
 
   const out = [`Number of students: ${total}`];
   for (const [field, list] of Object.entries(groups)) {
     out.push(
-      `Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`
+      `Number of students in ${field}: ${list.length}. List: ${list.join(', ')}`,
     );
   }
   return out.join('\n');
