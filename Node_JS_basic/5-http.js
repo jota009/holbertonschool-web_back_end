@@ -14,7 +14,7 @@ async function buildStudentsReport(dbPath) {
   let data;
   try {
   data = await fs.promises.readFile(dbPath, 'utf8');
-  } catch {
+  } catch (err) {
     throw new Error('Cannot load the database');
   }
 
