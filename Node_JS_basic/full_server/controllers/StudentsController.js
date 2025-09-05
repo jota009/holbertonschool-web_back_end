@@ -26,8 +26,8 @@ export default class StudentsController {
       );
 
       // Count total across groups
-      const total = fieldsSorted.reduce((acc, field) => acc + groups[field].length, 0);
-      lines.push(`Number of students: ${total}`);
+    //   const total = fieldsSorted.reduce((acc, field) => acc + groups[field].length, 0);
+    //   lines.push(`Number of students: ${total}`);
 
       // Per field: "Number of students in FIELD: N. List: first1, first2"
       for (const field of fieldsSorted) {
