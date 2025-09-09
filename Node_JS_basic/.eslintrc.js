@@ -1,5 +1,7 @@
 module.exports = {
+  root: true,
   env: {
+    node: true,
     browser: false,
     es6: true,
     jest: true,
